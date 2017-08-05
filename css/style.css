@@ -1,0 +1,24 @@
+body {
+    background: red;
+}
+
+;
+img {
+    /*    height: 300px;*/
+    margin-bottom: 300px;
+    transform-origin: 90% 10%;
+}
+
+
+/*obrót obrazka*/
+
+.rotate img {
+    transform: rotate(-160deg);
+}
+
+
+/*przesunięcie elementu względem osi x lub y*/
+
+.translate img {
+    transform: translate(-150px, 30px);
+}
