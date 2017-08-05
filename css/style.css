@@ -22,3 +22,7 @@ img {
 .translate img {
     transform: translate(-150px, 30px);
 }
+/*skalowanie obrazka*/
+.scale img:hover {
+    transform: scale(5.3);
+}
