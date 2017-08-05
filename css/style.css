@@ -1,28 +1,64 @@
-body {
-    background: red;
+        body {
+        background: red;
+    }
+    
+    ;
+    img {
+        /*    height: 300px;*/
+        margin-bottom: 300px;
+        transform-origin: 100% 50%;
+    }
+    
+/*obrót obrazka */
+    
+    .rotate img {
+        transform: rotate(-160deg);
+    }
+/*    przesunięcie elementu względem osi x lub y */
+    
+    .translate img {
+        transform: translate(-150px, 30px);
+    }
+    skalowanie obrazka
+    
+    .scale img:hover {
+        /*    przesunięcie punktu odniesienia transformacji transform-origin */
+/*        transform-origin: -50% -50%;*/
+/*        transform: scale(2.3);*/
+    }
+    /* animacja obrazka */
+    
+    .animation img {
+        animation-name: resize;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
 }
+        @keyframes resize {
+            0%, 100% {
+                height: 500px;
+            }
+            50% {
+                height: 50px;
+            }
+        }
 
-;
-img {
-    /*    height: 300px;*/
-    margin-bottom: 300px;
-    transform-origin: 90% 10%;
+.iteracja img {
+    animation-name: iter;
+    animation-duration: 5s;
+    animation-iteration-count: 25;
 }
-
-
-/*obrót obrazka*/
-
-.rotate img {
-    transform: rotate(-160deg);
-}
-
-
-/*przesunięcie elementu względem osi x lub y*/
-
-.translate img {
-    transform: translate(-150px, 30px);
-}
-/*skalowanie obrazka*/
-.scale img:hover {
-    transform: scale(5.3);
+@keyframes iter {
+    0%, 100% {
+        transform: translateY(50px);
+    }
+    25% {
+        transform: translateX(25px);
+        transform: scale(30%);
+    }
+    50% {
+        transform: rotate(-360deg);
+    }
+    75% {
+        transform: rotate(160deg);
+    }
 }
